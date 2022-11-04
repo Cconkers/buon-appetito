@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/scss/bootstrap";
+@font-face {
+  font-family: "CulinaryArt";
+  src: local("Oxygen"), url(./assets/fonts/CulinaryArt.ttf);
+}
+@font-face {
+  font-family: "Kapizza";
+  src: local("Oxygen"), url(./assets/fonts/Kapizza.ttf);
+}
