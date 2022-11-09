@@ -15,11 +15,11 @@
             ></fa-icon>
           </button>
           <mat-menu #menu="matMenu">
-            <button mat-menu-item>
+            <button (click)="language('ES')" mat-menu-item>
               <mat-icon><span class="fi fi-es"></span></mat-icon>
               <span>Spanish</span>
             </button>
-            <button mat-menu-item>
+            <button (click)="language('US')" mat-menu-item>
               <mat-icon class="iconLanguage"><span class="fi fi-us"></span></mat-icon>
               <span>English</span>
             </button>

@@ -53,7 +53,7 @@ export class MainPageComponent implements OnInit {
       },
       bttnCreatPizz: 'CREAR PIZZA'
     },
-    'EN': {
+    'US': {
       top: 'POPULARS',
       deliverText: 'FREE DELIVERY!',
       pizzas:
@@ -99,7 +99,7 @@ export class MainPageComponent implements OnInit {
       bttnCreatPizz: 'CREATE PIZZA'
     }
   }
-  actualLanguage = 'EN';
+  actualLanguage = 'US';
   constructor(private dialog: MatDialog) { }
 
   ngOnInit(): void {
