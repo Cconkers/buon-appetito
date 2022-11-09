@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import "../node_modules/bootstrap/scss/bootstrap";
+@import "/node_modules/flag-icons/css/flag-icons.min";
 @font-face {
   font-family: "CulinaryArt";
   src: url(./assets/fonts/CulinaryArt.ttf);
@@ -15,4 +15,16 @@
 @font-face {
   font-family: "Yummy";
   src: url(./assets/fonts/YummyPizza.ttf);
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.my-outlined-dialog {
+  outline: 2px solid purple;
 }
