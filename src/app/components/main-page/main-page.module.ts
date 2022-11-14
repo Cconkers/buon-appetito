@@ -5,17 +5,17 @@ import {MatButtonModule} from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PizzaPiecesModule } from '../pizza-pieces/pizza-pieces.module';
-import {MatIconModule} from '@angular/material/icon';
-import {MatMenuModule} from '@angular/material/menu';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { PizzaListModule } from '../pizza-list/pizza-list.module';
+import { NavBarModule } from '../nav-bar/nav-bar.module';
+
 
 @NgModule({
   declarations: [
     MainPageComponent
   ],
   imports: [
-    CommonModule, PizzaPiecesModule,MatButtonModule, BrowserAnimationsModule, MatDialogModule, MatButtonModule, MatIconModule, MatMenuModule, FontAwesomeModule, MatTooltipModule
+    CommonModule, PizzaPiecesModule,MatButtonModule, BrowserAnimationsModule, MatDialogModule, MatButtonModule,  MatTooltipModule, PizzaListModule, NavBarModule
   ]
 })
 export class MainPageModule { }

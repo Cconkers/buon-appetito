@@ -1,0 +1,21 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  background-color: #ffc107;
+  height: 8vh;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  .container-fluid {
+    height: -webkit-fill-available;
+  }
+  button {
+    width: 64px;
+    height: 36.3px;
+    fa-icon {
+      vertical-align: -webkit-baseline-middle;
+      color: 'accent';
+    }
+  }
+}

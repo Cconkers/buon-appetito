@@ -1,4 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+@use "@angular/material" as mat;
+@include mat.core();
+$my-primary-light: mat.define-palette(mat.$amber-palette, 500);
+$my-accent-light: mat.define-palette(mat.$green-palette, 800);
+$my-warn-light: mat.define-palette(mat.$red-palette, 900);
+
+$my-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $my-primary-light,
+      accent: $my-accent-light,
+      warn: $my-warn-light,
+    ),
+  )
+);
+@include mat.all-component-themes($my-theme);
 @import "/node_modules/flag-icons/css/flag-icons.min";
 @font-face {
   font-family: "CulinaryArt";
@@ -16,15 +31,21 @@
   font-family: "Yummy";
   src: url(./assets/fonts/YummyPizza.ttf);
 }
-
-html,
 body {
-  height: 100%;
-}
-body {
+  background-color: #dbdbdb;
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
-.my-outlined-dialog {
-  outline: 2px solid purple;
+
+.successAlert {
+  background-color: #FFC107;
+  width: 33vw;
+  height: 3rem;
+  .mat-simple-snackbar {
+    color: black;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+  }
 }

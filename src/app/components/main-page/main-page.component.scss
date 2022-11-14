@@ -1,13 +1,13 @@
+
 .section2 {
   height: 47.3rem;
-  background-color: #ffc107;
+  background-color: rgb(255, 179, 0);
 }
 .section1 {
   height: 60rem;
-  // background-image: url("../../../../src/assets/images/pizza2.jpg");
   background-color: #fff;
+  display: flex;
   &__layer {
-    // background-color: rgba(0, 0, 0, 0.164);
     width: 100%;
     &__body {
       display: flex;
@@ -17,20 +17,12 @@
       h1 {
         font-family: "Cheesy";
         font-size: 5rem;
-        // text-shadow: 0 0 3px rgb(0, 0, 0), 0 0 1px #fff, 0 0 7px rgb(255, 238, 0);
-        // color: rgb(255, 231, 95);
         color: #00b140;
         text-align: center;
-      }
-      h1 span {
-        font-family: "Kapizza";
-        font-size: 5rem;
       }
       h3 {
         font-family: "Cheesy";
         font-size: 5rem;
-        // text-shadow: 0 0 3px rgb(0, 0, 0), 0 0 1px #fff, 0 0 7px rgb(255, 238, 0);
-        // color: rgb(255, 231, 95);
         color: #0b692e;
         text-align: center;
         span {
@@ -41,176 +33,25 @@
       h4 {
         font-family: "Cheesy";
         font-size: 2rem;
-        // text-shadow: 0 0 3px rgb(0, 0, 0), 0 0 1px #fff, 0 0 7px rgb(255, 238, 0);
-        // color: rgb(255, 231, 95);
         color: #000000;
         font-weight: bold;
         text-align: center;
-      }
-      .neon {
-        height: 0rem;
-        box-shadow: 0px 0px 15px 6px rgb(255, 245, 104);
-        background-color: rgb(253, 255, 138);
-      }
-      button {
-        fa-icon {
-          color: #fff;
-        }
-      }
-    }
-    .mat-primary {
-      color: #000000;
-      background-color: #ffc107;
-      width: 9rem;
-    }
-  }
-  .navbar {
-    width: 100%;
-    display: flex;
-    background-color: #ffc107;
-    max-height: 6vh;
-    border-bottom: 10px solid rgb(255, 245, 104);
-    .container-fluid {
-      height: -webkit-fill-available;
-    }
-  }
-  .banner {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: space-between;
-    width: 95%;
-    .svg-container {
-      background-color: #ffc107;
-      box-shadow: inset 0px 10px 0px 0px #009246, inset 0px 20px 0px 0px rgb(255 255 255),
-        inset 0px 30px 0px 0px #ce2b37;
-      border-radius: 0px;
-      border: none;
-    }
-    .cartoon-banner {
-      display: flex;
-      align-items: flex-end;
-      p {
-        box-shadow: 3px 2px 0px 7px #2ba729;
-        min-width: 10rem;
-        min-height: 2rem;
-        font-family: "Cheesy";
-        padding: 0rem 1rem;
-        background-color: #fff;
-        border-radius: 10px;
-        border-bottom-right-radius: 0px;
-        position: relative;
-        bottom: 10rem;
-        left: 2rem;
-        color: #00b140;
-        font-size: 2rem;
-      }
-      img {
-        width: 15rem;
-        height: 15rem;
       }
     }
   }
 }
 
-.cards {
+.banner {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  width: 100%;
-  justify-content: center;
-}
-.glassBox {
-  &,
-  & * {
-    transition: 400ms;
-  }
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 300px;
-  max-width: 300px;
-  border-radius: 5px;
-  background: rgba(255, 255, 255, 0.37);
-  backdrop-filter: blur(2px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.808);
-  padding: 15px;
-  position: relative;
-  flex-direction: column;
-  margin: 1rem;
-  &__imgBox {
-    img {
-      display: block;
-      width: 100%;
-      height: 12rem;
-    }
-  }
-  &__title {
-    height: 1rem;
-    text-align: center;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 400;
-  }
-  &__content {
-    position: absolute;
-    right: 15px;
-    bottom: 15px;
-    left: 15px;
-    text-align: center;
-    color: rgb(0, 0, 0);
-    font-size: 14px;
-    letter-spacing: 0.1em;
-    opacity: 0;
-    p {
-      font-family: "Cheesy";
-    }
-  }
-  &:hover &__content {
-    opacity: 1;
-    // background: linear-gradient(to bottom, #b4ddb4 0%,#83c783 17%,#52b152 33%);
-    // background: linear-gradient(to bottom, #45484d 0%,#000000 100%);
-    // background-color: rgba(255, 234, 44, 0.726);
-    // text-shadow: 0px 10px 1px rgb(238, 255, 0);
-  }
-  &:hover &__imgBox img {
-    transform: translate(0px, -18px) rotate(3deg) scale(1.5);
-  }
-  &:hover &__title {
-    opacity: 0;
-  }
-}
-.glassBox::before {
-  position: absolute;
-  top: 2.1rem;
-  right: -0.5rem;
-  border: -10px -10px 1px 1px;
-  content: "";
-  background: #00b140;
-  height: 28px;
-  width: 28px;
-  transform: rotate(45deg);
-}
-.glassBox::after {
-  position: absolute;
-  content: attr(data-label);
-  top: 11px;
-  right: -14px;
-  padding: 0.5rem;
-  width: 8rem;
-  background: #00b140;
-  color: white;
-  text-align: center;
-  font-family: "Roboto", sans-serif;
-  box-shadow: 4px 4px 15px rgba(26, 35, 126, 0.2);
-}
-.mat-icon {
-  min-width: 34px;
-  min-height: 25px;
-  .fi-es,
-  .fi-us {
-    border-radius: 5px;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  width: 95%;
+  .svg-container {
+    background-color: #ffc107;
+    box-shadow: inset 0px 10px 0px 0px #009246, inset 0px 20px 0px 0px rgb(255 255 255), inset 0px 30px 0px 0px #ce2b37,
+      0px 0px 5px 0px rgb(0 0 0 / 50%);
+    border-radius: 15%;
   }
 }
