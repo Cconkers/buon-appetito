@@ -18,6 +18,15 @@ export class NavBarComponent implements OnInit {
     this.languages.$actualLanguage.subscribe((languageSelected) => {
       this.actualLanguageSelected = languageSelected
     })
-
+    this.subTotal();
+  }
+  subTotal(): number {
+    let total = 0;
+    this.cartServ.$items.subscribe((items) => {
+      total = items.reduce((productValue, product) => {
+        return productValue + product.quantity
+      }, 0)
+    })
+    return total;
   }
 }

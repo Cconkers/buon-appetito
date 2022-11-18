@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 import { LanguageService } from '../../language-service/language.service';
@@ -10,7 +10,9 @@ import { CartService } from '../cart/cart.service';
   styleUrls: ['./pizza-list.component.scss']
 })
 export class PizzaListComponent implements OnInit, OnDestroy {
+  @ViewChild('card') card!: ElementRef;
   actualLanguageSelected: string = '';
+  actualItems: Item[] = [];
   LANGUAGES = this.languages.LANGUAGES
 
   constructor(public languages: LanguageService, public cartServ: CartService, private _snackBar: MatSnackBar) { }
@@ -20,35 +22,42 @@ export class PizzaListComponent implements OnInit, OnDestroy {
     })
   }
 
-  openSnackBar(message: string, action: string) {
-    this._snackBar.open(message, action);
+
+  buy(pizza: Item) {
+
+
   }
 
-  buy(pizza: Pizza) {
+  add(event: Event, pizza: Item) {
+    const objetive = parseInt((event.target as HTMLAreaElement).id)
+    console.log(objetive);
+    this.LANGUAGES[this.actualLanguageSelected].items[objetive - 1].quantity++;
     this.cartServ.AddToCart(pizza);
-    this._snackBar.open(this.LANGUAGES[this.actualLanguageSelected].cartAdded + '🍕', '', {
-      duration: 3000,
+    this._snackBar.open(pizza.name + ' ' + this.LANGUAGES[this.actualLanguageSelected].cartAdded + ' ' + '🍕', '', {
+      duration: 2000,
       horizontalPosition: 'center',
-      verticalPosition: 'top',
+      verticalPosition: 'bottom',
       panelClass: ['successAlert']
     })
   }
-
-
-
+  decrease(pizza: Item, i: number) {
+  }
   ngOnDestroy(): void {
   }
 }
 
-export interface Pizza {
+export interface Item {
   id: number;
-  description: string;
-  name: string;
-  ingre1: string;
-  ingre2: string;
-  price: number;
+  name?: string;
+  quantity: number;
+  description?: string;
+  ingre1?: string;
+  ingre2?: string;
+  price?: number;
   base?: string;
   ingre3?: string;
   ingre4?: string;
+  size?: string;
   picture?: string;
-}[]
+  discount?: number;
+}

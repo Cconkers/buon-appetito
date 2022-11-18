@@ -3,12 +3,11 @@
   mat-button
   color="accent"
   matTooltip="{{ LANGUAGES[actualLanguageSelected].cart.name }}"
-  matBadge=""
+  [matBadge]="subTotal()"
   matBadgePosition="before"
   matBadgeColor="accent"
   aria-label="Cart"
   >
-  <!-- {{cartServ.pizzas.length > 0 ? cartServ.pizzas.length : '' }} -->
   <fa-icon [icon]="['fas', 'cart-shopping']" size="lg"></fa-icon>
 </button>
   <button

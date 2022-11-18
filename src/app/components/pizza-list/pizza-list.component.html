@@ -1,68 +1,55 @@
 <div class="cards">
-  <div
-    *ngFor="
-      let pizza of LANGUAGES[actualLanguageSelected].pizzas;
-      let i = index
-    "
-    class="card"
+  <ng-container
+    *ngFor="let pizza of LANGUAGES[actualLanguageSelected].items; let i = index"
   >
-    <div
-      matBadge=
-      ""
-
-      matBadgePosition="before"
-      matBadgeColor="accent"
-      class="card__body"
+    <div class="card">
+      <div
+        matBadge="{{ LANGUAGES[actualLanguageSelected].items[i].quantity }}"
+        matBadgePosition="before"
+        matBadgeColor="accent"
+        class="card__body"
       >
-      <!-- {{ cartServ.pizzas.length > 0 ? cartServ.pizzas.length : '' }} -->
-      <div class="card__description">
-        <h4 class="card__title">
-          {{ LANGUAGES[actualLanguageSelected].pizzas[i].name }}
-        </h4>
-        <div class="card__content">
-          <p>
-            {{ LANGUAGES[actualLanguageSelected].pizzas[i].description }}
-          </p>
+        <div class="card__description">
+          <h4 class="card__title">
+            {{ LANGUAGES[actualLanguageSelected].items[i].name }}
+          </h4>
+          <div class="card__content">
+            <p>
+              {{ LANGUAGES[actualLanguageSelected].items[i].description }}
+            </p>
+          </div>
+        </div>
+        <div class="card__imgBox">
+          <img
+            src="{{ LANGUAGES[actualLanguageSelected].items[i].picture }}"
+            alt="{{ LANGUAGES[actualLanguageSelected].items[i].name }}"
+          />
         </div>
       </div>
-      <div class="card__imgBox">
-        <img
-          src="{{ LANGUAGES[actualLanguageSelected].pizzas[i].picture }}"
-          alt="{{ LANGUAGES[actualLanguageSelected].pizzas[i].name }}"
-        />
-      </div>
-    </div>
-    <div class="card__footer">
-      <div class="card__price">
-        <div class="price">
-          {{ LANGUAGES[actualLanguageSelected].pizzas[i].price | currency }}
+      <div class="card__footer">
+        <div class="card__price">
+          <div class="price">
+            {{ LANGUAGES[actualLanguageSelected].items[i].price | currency }}
+          </div>
+        </div>
+        <div *ngClass="" class="card__footer-addCart">
+          <button
+            mat-flat-button
+            color="primary"
+            (click)="buy(LANGUAGES[actualLanguageSelected].items[i])"
+          >
+            {{ LANGUAGES[actualLanguageSelected].buyButton }}
+          </button>
+        </div>
+        <div class="card__footer__price-button">
+          <button mat-flat-button color="primary" (click)="decrease(pizza, i)">
+             -
+          </button>
+          <button [id]="LANGUAGES[actualLanguageSelected].items[i].id" mat-flat-button color="primary" (click)="add($event, pizza)">
+            +
+          </button>
         </div>
       </div>
-      <div *ngClass="  " class="card__footer-addCart">
-        <button
-          mat-flat-button
-          color="primary"
-          (click)="buy(LANGUAGES[actualLanguageSelected].pizzas[i])"
-        >
-          {{ LANGUAGES[actualLanguageSelected].buyButton }}
-        </button>
-      </div>
-      <div class="card__footer__price-button">
-        <button
-          mat-flat-button
-          color="primary"
-          (click)="buy(LANGUAGES[actualLanguageSelected].pizzas[i])"
-        >
-          -
-        </button>
-        <button
-          mat-flat-button
-          color="primary"
-          (click)="buy(LANGUAGES[actualLanguageSelected].pizzas[i])"
-        >
-          +
-        </button>
-      </div>
     </div>
-  </div>
+  </ng-container>
 </div>
