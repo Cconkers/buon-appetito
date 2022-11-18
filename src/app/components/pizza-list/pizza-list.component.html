@@ -4,7 +4,7 @@
   >
     <div class="card">
       <div
-        matBadge="{{ LANGUAGES[actualLanguageSelected].items[i].quantity }}"
+        matBadge="{{ LANGUAGES[actualLanguageSelected].items[i].quantity !== 0 ? LANGUAGES[actualLanguageSelected].items[i].quantity : ''}}"
         matBadgePosition="before"
         matBadgeColor="accent"
         class="card__body"

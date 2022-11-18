@@ -34,7 +34,7 @@ export class PizzaListComponent implements OnInit, OnDestroy {
     this.LANGUAGES[this.actualLanguageSelected].items[objetive - 1].quantity++;
     this.cartServ.AddToCart(pizza);
     this._snackBar.open(pizza.name + ' ' + this.LANGUAGES[this.actualLanguageSelected].cartAdded + ' ' + '🍕', '', {
-      duration: 2000,
+      duration: 900,
       horizontalPosition: 'center',
       verticalPosition: 'bottom',
       panelClass: ['successAlert']
