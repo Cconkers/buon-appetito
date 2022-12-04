@@ -1,9 +1,11 @@
-button {
-  .mat-badge-content  {
-       border: 2px solid white;
-     }
-  margin: 1rem;
-  fa-icon {
-    color: white;
-  }
+.cart{
+  height: 100vh;
+}
+mat-card {
+  margin-top: 1rem;
+  max-height: 388px;
+  overflow: auto;
+  position: sticky;
+  top: 15px;
+  z-index: 999;
 }

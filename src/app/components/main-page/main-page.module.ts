@@ -8,6 +8,8 @@ import { PizzaPiecesModule } from '../pizza-pieces/pizza-pieces.module';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { PizzaListModule } from '../pizza-list/pizza-list.module';
 import { NavBarModule } from '../nav-bar/nav-bar.module';
+import { CartModule } from '../cart/cart.module';
+import { CreatePizzaModule } from 'src/app/create-pizza/create-pizza.module';
 
 
 @NgModule({
@@ -15,7 +17,7 @@ import { NavBarModule } from '../nav-bar/nav-bar.module';
     MainPageComponent
   ],
   imports: [
-    CommonModule, PizzaPiecesModule,MatButtonModule, BrowserAnimationsModule, MatDialogModule, MatButtonModule,  MatTooltipModule, PizzaListModule, NavBarModule
+    CommonModule, PizzaPiecesModule,MatButtonModule, BrowserAnimationsModule, MatDialogModule, MatButtonModule,  MatTooltipModule, PizzaListModule, NavBarModule, CartModule, CreatePizzaModule
   ]
 })
 export class MainPageModule { }

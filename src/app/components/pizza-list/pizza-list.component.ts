@@ -30,7 +30,6 @@ export class PizzaListComponent implements OnInit, OnDestroy {
 
   add(event: Event, pizza: Item) {
     const objetive = parseInt((event.target as HTMLAreaElement).id)
-    console.log(objetive);
     this.LANGUAGES[this.actualLanguageSelected].items[objetive - 1].quantity++;
     this.cartServ.AddToCart(pizza);
     this._snackBar.open(pizza.name + ' ' + this.LANGUAGES[this.actualLanguageSelected].cartAdded + ' ' + '🍕', '', {

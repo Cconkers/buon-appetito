@@ -7,7 +7,7 @@ import { MainPageModule } from './components/main-page/main-page.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,

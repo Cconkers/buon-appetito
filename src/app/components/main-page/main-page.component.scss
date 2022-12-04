@@ -1,10 +1,8 @@
-
 .section2 {
-  height: 47.3rem;
   background-color: rgb(255, 179, 0);
 }
 .section1 {
-  height: 60rem;
+  height: 92vh;
   background-color: #fff;
   display: flex;
   &__layer {
@@ -41,8 +39,9 @@
   }
   &_1 {
     width: 70%;
+    height: fit-content;
   }
-  &_2{
+  &_2 {
     width: 30%;
   }
 }

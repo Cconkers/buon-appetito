@@ -154,16 +154,10 @@
           </svg>
         </div>
       </div>
-      <button mat-raised-button color="primary" (click)="showModal()">
-        {{ LANGUAGES[actualLanguageSelected].bttnCreatPizz }}
-      </button>
-      <button mat-raised-button color="accent" (click)="showModal()">
-        {{ LANGUAGES[actualLanguageSelected].bttnCreatPizz }}
-      </button>
-      <button mat-raised-button color="warn" (click)="showModal()">
-        {{ LANGUAGES[actualLanguageSelected].bttnCreatPizz }}
-      </button>
+      <app-cart></app-cart>
     </div>
   </div>
-  <div class="section2"></div>
+  <div class="section2">
+    <app-create-pizza></app-create-pizza>
+  </div>
 </div>
